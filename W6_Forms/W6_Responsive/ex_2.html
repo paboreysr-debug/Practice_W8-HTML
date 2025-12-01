@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar Exercise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: gray;
+            color: #000000;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            padding: 15px 20px;
+            height: 60px; 
+            border-bottom: 1px solid #cccccc;
+        }
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        .nav-links ul {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links ul li {
+            margin-left: 20px;
+        }
+        .nav-links ul li a {
+            color: #000000;
+            text-decoration: none;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
+        .nav-links ul li a:hover {
+            color: #666666;
+        }
+        #menu-toggle,
+        .hamburger-icon {
+            display: none;
+        }
+        @media (max-width: 767px) {
+            .hamburger-icon {
+                display: block; 
+                font-size: 2em;
+                cursor: pointer;
+                order: 2; 
+                color: #000000;
+            }
+            .nav-links {
+                display: none; 
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #f0f0f0; 
+                z-index: 10;
+                padding: 10px 0;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .nav-links ul {
+                flex-direction: column; 
+                padding: 0;
+            }
+
+            .nav-links ul li {
+                margin: 0;
+                text-align: center;
+                border-bottom: 1px solid #dddddd;
+            }
+            .nav-links ul li:last-child {
+                border-bottom: none;
+            }
+            .nav-links ul li a {
+                display: block;
+                padding: 15px 20px;
+                width: 100%;
+            }
+            #menu-toggle:checked ~ .nav-links {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Logo</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger-icon">&#9776; </label>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+</html>
