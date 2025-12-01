@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        div {
+            margin-bottom: 12px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #bbb;
+            box-sizing: border-box;
+        }
+
+        .radio-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background: linear-gradient(to right, #36d1dc, #5b86e5);
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Create New Account</h1>
+
+<form>
+    <div>
+        <label>Full Name</label>
+        <input type="text" placeholder="Your name">
+    </div>
+
+    <div>
+        <label>Email Address</label>
+        <input type="email" placeholder="example@email.com">
+    </div>
+
+    <div>
+        <label>Password</label>
+        <input type="password">
+    </div>
+
+    <div>
+        <label>Age</label>
+        <input type="number" min="18">
+    </div>
+
+    <div>
+        <label>Birthdate</label>
+        <input type="date">
+    </div>
+
+    <div class="radio-group">
+        <label>Gender</label>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <input type="radio" name="gender"> Other
+    </div>
+    <div>
+        <label>Country</label>
+        <select>
+            <option>Select country</option>
+            <option>USA</option>
+            <option>Canada</option>
+            <option>Mexico</option>
+        </select>
+    </div>
+
+    <div>
+        <input type="checkbox"> Send me updates
+    </div>
+
+    <button type="submit">Sign Up</button>
+</form>
+
+</body>
+</html>
