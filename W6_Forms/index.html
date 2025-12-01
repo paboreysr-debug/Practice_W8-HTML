@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basic Create Account</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #eeeeee;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 500px;
+        margin: auto;
+        background-color: #ffffff;
+        padding: 20px;
+        border: 1px solid #999;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 7px;
+        margin-top: 4px;
+        border: 1px solid #999;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        height: 70px;
+    }
+
+    .options {
+        margin-top: 8px;
+    }
+
+    .options input {
+        width: auto;
+        margin-right: 6px;
+    }
+
+    .income-control {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 5px;
+    }
+
+    .income-value {
+        font-weight: bold;
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 8px;
+        width: 100%;
+        background-color: #444;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #222;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Create Account</h2>
+
+<form>
+
+    <label>First Name</label>
+    <input type="text">
+
+    <label>Last Name</label>
+    <input type="text">
+
+    <label>Email</label>
+    <input type="email">
+
+    <label>Password</label>
+    <input type="password">
+
+    <label>Confirm Password</label>
+    <input type="password">
+
+    <label>Gender</label>
+    <div class="options">
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+    </div>
+
+    <label>Hobbies</label>
+    <div class="options">
+        <input type="checkbox"> Music
+        <input type="checkbox"> Sports
+        <input type="checkbox"> Travel
+        <input type="checkbox"> Movies
+    </div>
+
+    <label>Source of Income</label>
+    <select>
+        <option>Select</option>
+        <option>Student</option>
+        <option>Employed</option>
+        <option>Business</option>
+    </select>
+
+    <label>Income</label>
+    <div class="income-control">
+        <input type="range" id="income" min="0" max="100" value="20">
+        <span class="income-value" id="incomeValue">20K</span>
+    </div>
+
+    <label>Age</label>
+    <input type="number" min="18">
+
+    <label>Profile Picture</label>
+    <input type="file">
+
+    <label>Bio</label>
+    <textarea></textarea>
+
+    <button type="submit">Create Account</button>
+
+</form>
+</div>
+
+<script>
+    const slider = document.getElementById("income");
+    const output = document.getElementById("incomeValue");
+    slider.oninput = function () {
+        output.innerHTML = this.value + "K";
+    };
+</script>
+
+</body>
+</html>
